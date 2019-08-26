@@ -3,7 +3,7 @@ const { Server } = require('@hapi/hapi');
 const Inert = require('@hapi/inert');
 
 const server = new Server({
-    port: 3001,
+    port: 3000,
     routes: {
         files: {
             relativeTo: path.join(__dirname, 'public') //this one makes html and js files available
