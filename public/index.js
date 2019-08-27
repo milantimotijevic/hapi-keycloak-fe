@@ -33,7 +33,7 @@ function getResource(name) {
             displayDiv.innerHTML = 'You may not access this resource! FOOL!';
         }
     };
-    xhttp.open("GET", "http://localhost:3000/private/" + name, true);
-    xhttp.setRequestHeader('Authorization', 'Bearer ' + keycloak.token)
+    xhttp.open("GET", "http://localhost:3000/api/v1/" + name, true);
+    xhttp.setRequestHeader('Authorization', 'Bearer ' + keycloak.token);
     xhttp.send();
 }
