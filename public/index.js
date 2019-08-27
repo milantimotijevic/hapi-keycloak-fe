@@ -20,7 +20,7 @@ keycloak.onAuthSuccess = function() {
 };
 
 keycloak.onAuthLogout = function() {
-    loggedInAsSpan.innerHTML = '';
+    loggedInAsSpan.innerHTML = '(none)';
 };
 
 keycloak.init({
