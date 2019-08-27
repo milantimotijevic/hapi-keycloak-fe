@@ -14,6 +14,15 @@ keycloak.onTokenExpired = function () {
     });
 };
 
+const loggedInAsSpan = document.getElementById('logged-in-as');
+keycloak.onAuthSuccess = function() {
+    loggedInAsSpan.innerHTML = ' NAME: ' + keycloak.tokenParsed.preferred_username + ' / ROLES: ' + keycloak.tokenParsed.realm_access.roles;
+};
+
+keycloak.onAuthLogout = function() {
+    loggedInAsSpan.innerHTML = '';
+};
+
 keycloak.init({
     responseMode: 'fragment',
     flow: 'standard',
