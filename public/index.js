@@ -19,10 +19,6 @@ keycloak.onAuthSuccess = function() {
     loggedInAsSpan.innerHTML = ' NAME: ' + keycloak.tokenParsed.preferred_username + ' / ROLES: ' + keycloak.tokenParsed.realm_access.roles;
 };
 
-keycloak.onAuthLogout = function() {
-    loggedInAsSpan.innerHTML = '(none)';
-};
-
 keycloak.init({
     responseMode: 'fragment',
     flow: 'standard',
