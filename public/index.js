@@ -42,17 +42,3 @@ function getHealthCheck() {
     xhttp.setRequestHeader('Authorization', 'Bearer ' + keycloak.token);
     xhttp.send();
 }
-
-// function getResource(name) {
-//     const xhttp = new XMLHttpRequest();
-//     xhttp.onreadystatechange = function() {
-//         if (this.readyState === 4 && this.status === 200) {
-//             displayDiv.innerHTML = this.responseText;
-//         } else {
-//             displayDiv.innerHTML = 'You may not access this resource! FOOL!';
-//         }
-//     };
-//     xhttp.open("GET", "http://localhost:3000/api/v1/" + name, true);
-//     xhttp.setRequestHeader('Authorization', 'Bearer ' + keycloak.token);
-//     xhttp.send();
-// }
