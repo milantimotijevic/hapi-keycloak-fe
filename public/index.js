@@ -38,7 +38,7 @@ function getHealthCheck() {
             displayDiv.innerHTML = 'You may not access this resource! FOOL!';
         }
     };
-    xhttp.open("GET", "http://localhost:3001/api/v1/" + name, true);
+    xhttp.open("GET", "http://localhost:3001/dataset" + name, true);
     xhttp.setRequestHeader('Authorization', 'Bearer ' + keycloak.token);
     xhttp.send();
 }
