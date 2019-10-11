@@ -1,4 +1,8 @@
-const keycloak = Keycloak();
+const keycloak = Keycloak({
+    url: 'http://localhost:8080/auth',
+    realm: 'augustus',
+    clientId: 'augustus_client',
+});
 let authorization; // TODO see if this is needed for anything
 
 keycloak.onTokenExpired = function () {
