@@ -20,7 +20,8 @@ keycloak.onTokenExpired = function () {
 
 const loggedInAsSpan = document.getElementById('logged-in-as');
 keycloak.onAuthSuccess = function() {
-    loggedInAsSpan.innerHTML = ' NAME: ' + keycloak.tokenParsed.preferred_username + ' / ROLES: ' + keycloak.tokenParsed.realm_access.roles;
+	console.log(keycloak.tokenParsed)
+    loggedInAsSpan.innerHTML = ' NAME: ' + keycloak.tokenParsed.preferred_username + ' / ROLES: ' + keycloak.tokenParsed.realm_roles;
 };
 
 keycloak.init({
